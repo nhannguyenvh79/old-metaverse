@@ -1,0 +1,85 @@
+////banner css
+.banner{
+    height: 100vh;
+    background-color: $background;
+    position: relative;
+    left: 0px;
+    .text-container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-10deg);
+        width: 1100px;
+        h1 {
+            width: inherit;
+            font-size: 130px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 700;
+            overflow: visible;
+            font-family: $primary_font;
+        }
+        #line-2{
+            padding-left: 4vw;
+        }
+    }
+}
+
+
+
+////pen css
+.pen-container{
+    z-index: 1;
+    position: sticky;
+    top: 40vh;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    .sub-container {
+        width: 50vw;
+        height: inherit;
+        #pen {
+            position: absolute;
+            top: 0px;
+            height: 10vh;
+            transform: translateX(116%);
+        }
+        #pen-cap {
+            position: absolute;
+            top: 0px;
+            height: calc(10vh + 20px);
+            transform: translateX(-150%);
+        }
+    }
+}
+
+
+
+///information css
+.information-container {
+    text-align: justify;
+    font-family: $primary_font;
+    img {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+        margin: 30px 0px;
+    }
+    h5{
+        color: rgb(136, 132, 127);
+    }
+    h1 {
+        background: linear-gradient(to right, rgb(146, 104, 243), rgb(114, 154, 199));
+        background-clip: text   ;
+        -webkit-background-clip: text; 
+        color: transparent;
+    }
+    p{
+        color:rgb(240, 235, 229);
+    }
+    .content-container{
+        padding: 0px 200px;
+    }
+}

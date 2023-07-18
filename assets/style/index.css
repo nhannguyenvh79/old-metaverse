@@ -1,0 +1,124 @@
+html {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Space Mono", monospace;
+  scroll-behavior: smooth;
+  background-color: rgb(17, 17, 17);
+}
+
+body {
+  background-color: rgb(17, 17, 17) !important;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(17, 17, 17);
+}
+
+header {
+  background-color: rgb(17, 17, 17);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+}
+header .nav-custom {
+  color: white;
+  font-family: "Space Mono", monospace;
+}
+header .nav-custom svg {
+  color: white;
+  font-size: 36px;
+}
+header .navbar-nav-custom {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+header .navbar-nav-custom .nav-item {
+  flex: 0 0 15%;
+}
+header .navbar-nav-custom .nav-item .nav-link {
+  color: white;
+}
+
+.banner {
+  height: 100vh;
+  background-color: rgb(17, 17, 17);
+  position: relative;
+  left: 0px;
+}
+.banner .text-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-10deg);
+  width: 1100px;
+}
+.banner .text-container h1 {
+  width: inherit;
+  font-size: 130px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow: visible;
+  font-family: "Space Mono", monospace;
+}
+.banner .text-container #line-2 {
+  padding-left: 4vw;
+}
+
+.pen-container {
+  z-index: 1;
+  position: sticky;
+  top: 40vh;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+.pen-container .sub-container {
+  width: 50vw;
+  height: inherit;
+}
+.pen-container .sub-container #pen {
+  position: absolute;
+  top: 0px;
+  height: 10vh;
+  transform: translateX(116%);
+}
+.pen-container .sub-container #pen-cap {
+  position: absolute;
+  top: 0px;
+  height: calc(10vh + 20px);
+  transform: translateX(-150%);
+}
+
+.information-container {
+  text-align: justify;
+  font-family: "Space Mono", monospace;
+}
+.information-container img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin: 30px 0px;
+}
+.information-container h5 {
+  color: rgb(136, 132, 127);
+}
+.information-container h1 {
+  background: linear-gradient(to right, rgb(146, 104, 243), rgb(114, 154, 199));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.information-container p {
+  color: rgb(240, 235, 229);
+}
+.information-container .content-container {
+  padding: 0px 200px;
+}/*# sourceMappingURL=index.css.map */
