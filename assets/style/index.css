@@ -13,7 +13,6 @@ body {
 section {
   height: 100vh;
   width: 100%;
-  background-color: rgb(17, 17, 17);
 }
 
 header {
@@ -25,11 +24,11 @@ header {
   z-index: 99;
 }
 header .nav-custom {
-  color: white;
+  color: rgb(240, 235, 229);
   font-family: "Space Mono", monospace;
 }
 header .nav-custom svg {
-  color: white;
+  color: rgb(240, 235, 229);
   font-size: 36px;
 }
 header .navbar-nav-custom {
@@ -41,7 +40,7 @@ header .navbar-nav-custom .nav-item {
   flex: 0 0 15%;
 }
 header .navbar-nav-custom .nav-item .nav-link {
-  color: white;
+  color: rgb(240, 235, 229);
 }
 
 .banner {
@@ -60,7 +59,7 @@ header .navbar-nav-custom .nav-item .nav-link {
 .banner .text-container h1 {
   width: inherit;
   font-size: 130px;
-  color: white;
+  color: rgb(240, 235, 229);
   text-transform: uppercase;
   font-weight: 700;
   overflow: visible;
@@ -71,8 +70,7 @@ header .navbar-nav-custom .nav-item .nav-link {
 }
 
 .pen-container {
-  z-index: 1;
-  position: sticky;
+  position: sticky !important;
   top: 40vh;
   height: 13vh;
   display: flex;
@@ -88,13 +86,11 @@ header .navbar-nav-custom .nav-item .nav-link {
   position: absolute;
   top: 0px;
   height: 10vh;
-  transform: translateX(116%);
 }
 .pen-container .sub-container #pen-cap {
   position: absolute;
   top: 0px;
   height: calc(10vh + 20px);
-  transform: translateX(-150%);
 }
 
 .information-container {
@@ -120,5 +116,136 @@ header .navbar-nav-custom .nav-item .nav-link {
   color: rgb(240, 235, 229);
 }
 .information-container .content-container {
+  position: relative;
+  z-index: 5;
   padding: 0px 200px;
+}
+
+.projects {
+  height: auto;
+}
+.projects .projects-container {
+  position: relative;
+  z-index: 5;
+  text-align: justify;
+  font-family: "Space Mono", monospace;
+}
+.projects .projects-container img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin: 30px 0px;
+}
+.projects .projects-container h5 {
+  color: rgb(136, 132, 127);
+}
+.projects .projects-container h1 {
+  color: rgb(240, 235, 229);
+}
+.projects .projects-container p {
+  color: rgb(240, 235, 229);
+}
+.projects .projects-container .content-container {
+  padding: 0px 200px;
+}
+.projects .project-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30vh 0px;
+  border-radius: 10px;
+  border: 2px solid rgb(240, 235, 229);
+  padding: 20px;
+  height: 50vh;
+  text-align: left;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+.projects .project-container:hover {
+  box-shadow: rgba(93, 48, 169, 0.5) 0px 0px 30px 20px;
+}
+.projects .project-container:hover .project-img.nocolor {
+  opacity: 0;
+}
+.projects .project-container:hover .project-img.color {
+  opacity: 1;
+}
+.projects .project-container .project-infor {
+  width: 40%;
+}
+.projects .project-container .project-infor h2 {
+  background-color: rgb(93, 48, 169);
+  color: rgb(71, 233, 141);
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 700;
+  transition: all 0.4s ease-in-out;
+  font-size: 35px;
+}
+.projects .project-container .project-infor h2:hover {
+  background-color: rgb(146, 104, 243);
+}
+.projects .project-container .project-infor p {
+  margin: 10px 0px;
+}
+.projects .project-container button.launch {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(240, 235, 229);
+  color: rgb(240, 235, 229);
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  transition: all 0.4s ease-in-out;
+}
+.projects .project-container button.launch:hover {
+  color: rgb(17, 17, 17);
+  background-color: rgb(240, 235, 229);
+}
+.projects .project-container .project-img {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  right: -50px;
+  top: 50px;
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects .project-container .project-img.nocolor {
+  opacity: 1;
+}
+.projects .project-container .project-img.color {
+  opacity: 0;
+}
+.projects .project-container .project-img img {
+  width: 100%;
+}
+
+.contact-container {
+  color: white;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.contact-container a {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0px;
+  color: rgb(240, 235, 229);
+}
+.contact-container a:hover svg {
+  transition: all ease-in-out 0.4s;
+  color: rgb(146, 104, 243);
 }/*# sourceMappingURL=index.css.map */
