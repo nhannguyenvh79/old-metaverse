@@ -13,9 +13,13 @@ body {
 section {
   height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
+  display: none;
   background-color: rgb(17, 17, 17);
   position: fixed;
   width: 100%;
@@ -41,6 +45,16 @@ header .navbar-nav-custom .nav-item {
 }
 header .navbar-nav-custom .nav-item .nav-link {
   color: rgb(240, 235, 229);
+}
+
+.back-to-top {
+  font-size: 40px;
+  color: rgb(240, 235, 229);
+  position: fixed;
+  right: 0px;
+  bottom: 50px;
+  z-index: 10;
+  opacity: 0.8;
 }
 
 .banner {
@@ -69,28 +83,21 @@ header .navbar-nav-custom .nav-item .nav-link {
   padding-left: 4vw;
 }
 
-.pen-container {
-  position: sticky !important;
-  top: 40vh;
-  height: 13vh;
+.personalities {
   display: flex;
   justify-content: center;
-  width: 100%;
-  overflow: hidden;
+  align-items: center;
 }
-.pen-container .sub-container {
-  width: 50vw;
-  height: inherit;
-}
-.pen-container .sub-container #pen {
-  position: absolute;
-  top: 0px;
-  height: 10vh;
-}
-.pen-container .sub-container #pen-cap {
-  position: absolute;
-  top: 0px;
-  height: calc(10vh + 20px);
+.personalities h2 {
+  padding: 10px 0px;
+  font-weight: 700;
+  background-color: rgb(240, 235, 229);
+  color: rgb(17, 17, 17);
+  display: flex;
+  justify-content: space-evenly;
+  width: 120vw;
+  font-size: 80px;
+  text-transform: uppercase;
 }
 
 .information-container {
@@ -165,10 +172,16 @@ header .navbar-nav-custom .nav-item .nav-link {
 .projects .project-container:hover {
   box-shadow: rgba(93, 48, 169, 0.5) 0px 0px 30px 20px;
 }
+.projects .project-container.active {
+  box-shadow: rgba(93, 48, 169, 0.5) 0px 0px 30px 20px;
+}
 .projects .project-container:hover .project-img.nocolor {
   opacity: 0;
 }
 .projects .project-container:hover .project-img.color {
+  opacity: 1;
+}
+.projects .project-container.active .project-img.color {
   opacity: 1;
 }
 .projects .project-container .project-infor {
@@ -227,6 +240,23 @@ header .navbar-nav-custom .nav-item .nav-link {
   width: 100%;
 }
 
+@keyframes changeColor {
+  0% {
+    color: rgb(170, 217, 97);
+  }
+  25% {
+    color: rgb(71, 233, 141);
+  }
+  50% {
+    color: rgb(226, 242, 178);
+  }
+  75% {
+    color: rgb(99, 134, 173);
+  }
+  100% {
+    color: rgb(170, 217, 97);
+  }
+}
 .contact-container {
   color: white;
   font-size: 45px;
@@ -238,14 +268,232 @@ header .navbar-nav-custom .nav-item .nav-link {
   height: fit-content;
 }
 .contact-container a {
+  animation: changeColor 3s ease-in-out infinite;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 0px;
   color: rgb(240, 235, 229);
+  background: linear-gradient(to right, #30CFD0, #330867);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .contact-container a:hover svg {
   transition: all ease-in-out 0.4s;
   color: rgb(146, 104, 243);
+}
+
+.pen-container {
+  position: sticky !important;
+  top: 60vh;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  z-index: 22;
+}
+.pen-container .sub-container {
+  width: 50vw;
+  height: inherit;
+}
+.pen-container .sub-container #pen {
+  position: absolute;
+  top: 0px;
+  height: 10vh;
+}
+.pen-container .sub-container #pen-cap {
+  position: absolute;
+  top: 0px;
+  height: calc(10vh + 18px);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(240, 235, 229);
+  font-family: "Space Mono", monospace;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+  .information-container .content-container {
+    padding: 0px 100px;
+  }
+  .projects .projects-container .content-container {
+    padding: 0px 100px;
+  }
+  .pen-container .sub-container #pen {
+    height: 9vh;
+  }
+  .pen-container .sub-container #pen-cap {
+    height: calc(9vh + 18px);
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .banner .text-container {
+    width: 800px;
+  }
+  .banner .text-container h1 {
+    font-size: 100px;
+  }
+  .personalities h2 {
+    font-size: 70px;
+  }
+  .information-container .content-container {
+    padding: 0px 50px;
+  }
+  .projects .projects-container .content-container {
+    padding: 0px 50px;
+  }
+  .projects .project-container {
+    height: 60vh;
+  }
+  .pen-container .sub-container #pen {
+    height: 8vh;
+  }
+  .pen-container .sub-container #pen-cap {
+    height: calc(8vh + 18px);
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .banner .text-container {
+    width: 700px;
+  }
+  .banner .text-container h1 {
+    font-size: 90px;
+  }
+  .personalities h2 {
+    font-size: 50px;
+  }
+  .information-container .content-container {
+    padding: 0px 50px;
+  }
+  .projects .project-container {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .projects .projects-container .content-container {
+    padding: 0px 50px;
+  }
+  .projects .project-container .project-infor {
+    width: 50%;
+  }
+  .projects .project-container .project-infor h2 {
+    font-size: 30px;
+  }
+  .projects .project-container .project-infor p {
+    font-size: 18px;
+  }
+  .projects .project-container .project-img::before {
+    content: "";
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(17, 17, 17);
+    opacity: 0.7;
+  }
+  .pen-container .sub-container #pen {
+    height: 50px;
+  }
+  .pen-container .sub-container #pen-cap {
+    height: 61px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .banner .text-container {
+    width: 550px;
+  }
+  .banner .text-container h1 {
+    font-size: 70px;
+  }
+  .personalities h2 {
+    font-size: 40px;
+  }
+  .information-container .content-container {
+    padding: 0px 0px;
+  }
+  .projects .project-container {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .projects .projects-container .content-container {
+    padding: 0px 0px;
+  }
+  .projects .project-container .project-infor {
+    width: 100%;
+  }
+  .projects .project-container .project-infor h2 {
+    font-size: 30px;
+  }
+  .projects .project-container .project-infor p {
+    font-size: 18px;
+  }
+  .projects .project-container .project-img::before {
+    content: "";
+    width: 100%;
+    height: 110%;
+    z-index: 1;
+    position: absolute;
+    top: -10%;
+    background-color: rgb(17, 17, 17);
+    opacity: 0.7;
+  }
+  .pen-container .sub-container #pen {
+    height: 50px;
+  }
+  .pen-container .sub-container #pen-cap {
+    height: 61px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner .text-container {
+    width: 320px;
+  }
+  .banner .text-container h1 {
+    font-size: 40px;
+  }
+  .personalities h2 {
+    font-size: 25px;
+  }
+  .information-container .content-container {
+    padding: 0px 10px;
+  }
+  .projects .project-container {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .projects .projects-container .content-container {
+    padding: 0px 10px;
+  }
+  .projects .project-container .project-infor {
+    width: 100%;
+  }
+  .projects .project-container .project-infor h2 {
+    font-size: 30px;
+  }
+  .projects .project-container .project-infor p {
+    font-size: 18px;
+  }
+  .projects .project-container .project-img::before {
+    content: "";
+    width: 100%;
+    height: 110%;
+    z-index: 1;
+    position: absolute;
+    top: -10%;
+    background-color: rgb(17, 17, 17);
+    opacity: 0.7;
+  }
+  .pen-container {
+    justify-content: flex-start;
+  }
+  .pen-container .sub-container #pen {
+    height: 50px;
+  }
+  .pen-container .sub-container #pen-cap {
+    height: 61px;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -12,9 +12,13 @@ body{
 section{
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 header {
+    display: none;
     background-color:  $background;
     position: fixed;
     width: 100%;
@@ -41,5 +45,15 @@ header {
             }
         }
     }
+}
+
+.back-to-top{
+    font-size: 40px;
+    color: $main_color;
+    position: fixed;
+    right: 0px;
+    bottom: 50px;
+    z-index: 10;
+    opacity: 0.8;
 }
 
