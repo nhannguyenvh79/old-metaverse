@@ -115,7 +115,7 @@
         border-radius: 10px;
         border: 2px solid $main_color;
         padding: 20px;
-        height: 50vh;
+        height: fit-content;
         text-align: left;
         transition: all 0.4s ease-in-out;
         overflow: hidden;
@@ -312,7 +312,7 @@ footer {
         padding: 0px 50px;
     }
     .projects .project-container {
-        height: 60vh;
+        height: fit-content;
     }
     .pen-container .sub-container #pen{
         height: 8vh;

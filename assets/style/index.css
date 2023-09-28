@@ -164,7 +164,8 @@ header .navbar-nav-custom .nav-item .nav-link {
   border-radius: 10px;
   border: 2px solid rgb(240, 235, 229);
   padding: 20px;
-  height: 50vh;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: left;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -348,7 +349,8 @@ footer {
     padding: 0px 50px;
   }
   .projects .project-container {
-    height: 60vh;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .pen-container .sub-container #pen {
     height: 8vh;
